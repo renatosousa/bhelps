@@ -8,7 +8,7 @@ const Idea = mongoose.model('ideas');
 router.post('/', (req, res) => {
   console.log(req.body.prestador);
 
-  Idea.find({title: req.body.prestador})
+  Idea.find({title: {'$regex': req.body.prestador, '$options': 'i'}})
     .sort({date:'desc'})
     .then(ideas => {
       console.log(req.body.prestador);
