@@ -3,6 +3,11 @@
   margin:auto;
 }
 
+.logo_nav{
+  width:200px;
+  margin:auto;
+}
+
 #map {
         height: 400px;
         width: 100%;

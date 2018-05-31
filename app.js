@@ -13,6 +13,7 @@ const app = express();
 // Load routes
 const ideas = require('./routes/ideas');
 const users = require('./routes/users');
+const findhelp = require('./routes/findhelp');
 
 // Passport Config
 require('./config/passport')(passport);
@@ -83,6 +84,7 @@ app.get('/about', (req, res) => {
 // Use routes
 app.use('/ideas', ideas);
 app.use('/users', users);
+app.use('/findhelp', findhelp);
 
 const port = process.env.PORT || 8080;
 
